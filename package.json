@@ -4,8 +4,8 @@
   "description": "Javascript library for parsing into form fields Europass Json data.",
   "main": "build/europass-parser.js",
   "scripts": {
-    "init": "mkdir doc",
-    "clean": "rm -rf doc",
+    "init": "mkdir docs",
+    "clean": "rm -rf docs",
     "prebuild": "npm run clean && npm run init",
     "build": "webpack --mode development --env build && NODE_ENV=production",
     "dev": "webpack-dev-server --inline --hot --mode development --open google-chrome"

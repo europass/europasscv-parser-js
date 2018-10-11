@@ -37,7 +37,7 @@ const config = {
         minimize: env === 'build' ? true : false
     },
     output: {
-        path: __dirname + '/doc',
+        path: __dirname + '/docs',
         filename: outputFile,
         library: 'EuropassParser',
         libraryTarget: 'umd',
