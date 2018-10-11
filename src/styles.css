@@ -1,0 +1,473 @@
+html,
+body {
+    margin: 0;
+    font-family: 'Roboto'
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* instead of using 100% all over, use viewport units once */
+    background: #2e435f;
+}
+
+.box .row.content,
+.content .one-fifth.column {
+    align-items: center;
+    justify-content: center;
+}
+
+.box .row.header,
+.box .row.footer {
+    color: #f5f5f5;
+}
+
+
+.box .row.footer p {
+    margin-left: 10px;
+}
+
+.box .row.content {
+    background: #f5f5f5;
+}
+
+#loader {
+    display: none;
+    justify-content: center;
+    align-content: center;
+}
+
+#loader svg {
+    width: 100px;
+    margin: 20px;
+    display: inline-block;
+    color: #2e435f;
+}
+
+.one-fifth.column.file_uploader {
+
+    overflow-y: hidden;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.one-fifth.column.file_uploader div ol {
+    text-align: left;
+}
+
+.info {
+    margin-left: 20px;
+    overflow-y: auto;
+}
+
+.one-fifth.column.subbox {
+    width: 100%;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+
+
+@media screen and (max-width: 900px) {
+    /* smaller screens */
+    .box .row.content {
+        flex-direction: column;
+        /* by simply swap direction it work on smaller screen */
+    }
+}
+
+/* Input  Styling*/
+.file_uploader_section {
+    display: block;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile+label {
+    max-width: 80%;
+    font-size: 1.25rem;
+    /* 20px */
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+    /* 10px 20px */
+}
+
+.inputfile:focus+label,
+.inputfile.has-focus+label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile+label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    /* 4px */
+    margin-right: 0.25em;
+    /* 4px */
+}
+
+/* style 5 */
+
+.inputfile-5+label {
+    color: #2e435f;
+}
+
+.inputfile-5:focus+label,
+.inputfile-5.has-focus+label,
+.inputfile-5+label:hover {
+    color: #25354b;
+}
+
+.inputfile-5+label figure {
+    width: 100px;
+    height: 135px;
+    background-color: #2e435f;
+    display: block;
+    position: relative;
+    padding: 30px;
+    margin: 0 auto 10px;
+}
+
+.inputfile-5:focus+label figure,
+.inputfile-5.has-focus+label figure,
+.inputfile-5+label:hover figure {
+    background-color: #25354b;
+}
+
+.inputfile-5+label figure::before,
+.inputfile-5+label figure::after {
+    width: 0;
+    height: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.inputfile-5+label figure::before {
+    border-top: 20px solid #f5f5f5;
+    border-left: 20px solid transparent;
+}
+
+.inputfile-5+label figure::after {
+    border-bottom: 20px solid #25354b;
+    border-right: 20px solid transparent;
+}
+
+.inputfile-5:focus+label figure::after,
+.inputfile-5.has-focus+label figure::after,
+.inputfile-5+label:hover figure::after {
+    border-bottom-color: #2e435f;
+}
+
+.inputfile-5+label svg {
+    width: 100%;
+    height: 100%;
+    fill: #f5f5f5;
+}
+
+/* Form fields */
+
+.form-group {
+    position: relative;
+    padding-top: 1.5rem;
+}
+
+.form-group input {
+    width: 100%;
+}
+
+/*
+label.form {
+    position: absolute;
+    top: 0;
+    font-size: 12px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.2s ease-out;
+}
+
+input.form:placeholder-shown + label {
+    opacity: 0;
+    transform: translateY(1rem);
+}
+*/
+
+/* form starting stylings ------------------------------- */
+
+.group {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.group input {
+    background: #f5f5f5;
+    font-size: 18px;
+    padding: 10px 0px 10px 0px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #757575;
+}
+
+.group input:focus {
+    outline: none;
+}
+
+/* LABEL ======================================= */
+
+.group label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 0px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+
+.group input:focus~label,
+.group input:valid~label {
+    top: -20px;
+    font-size: 14px;
+    color: #2e435f;
+}
+
+/* BOTTOM BARS ================================= */
+
+.group .bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.group .bar:before,
+.group .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #2e435f;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.group .bar:before {
+    left: 50%;
+}
+
+.group .bar:after {
+    right: 50%;
+}
+
+/* active state */
+
+.group input:focus~.bar:before,
+.group input:focus~.bar:after {
+    width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+
+.group .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* active state */
+
+.group input:focus~.highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: #2e435f;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: #2e435f;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #2e435f;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+/** Textarea */
+
+textarea {
+    display: block;
+    width: 100%;
+    border: 0;
+    padding: 10px 5px;
+    background: #F5F5F5 no-repeat;
+    /*
+	* IMPORTANT PART HERE
+	*/
+    /* 2 imgs : 1px gray line (normal state) AND 2px green line (focus state) */
+    background-image: linear-gradient(to bottom, #2e435f, #2e435f), linear-gradient(to bottom, silver, silver);
+    /* sizes for the 2 images (default state) */
+    background-size: 0 2px, 100% 1px;
+    /* positions for the 2 images. Change both "50%" to "0%" or "100%" and tri again */
+    background-position: 50% 100%, 50% 100%;
+    /* animation solely on background-size */
+    transition: background-size 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+}
+
+textarea:focus {
+    /* sizes for the 2 images (focus state) */
+    background-size: 100% 2px, 100% 1px;
+    outline: none;
+}
+
+.work_exp_wrapper{
+    margin-top: 20px;
+}
+
+#cedefop_link{
+    color: #f5f5f5;
+}
+
+
+/*ck changes 2/8
+***************************************/
+
+.info,.subbox{
+    max-width:960px;
+    margin:0 auto 2vw;
+}
+
+.info{
+    border-bottom:1px solid lightgray;
+}
+
+h3{
+    margin-top:2vw;
+}
+
+#photo{
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
+
+#photo img{
+    max-height:200px;
+}
+
+.file_uploader_section{
+    display:flex;
+    justify-content: center;
+}
+
+.form-group,.work_exp_wrapper,.edu_wrapper,.ach_wrapper,.mlang_wrapper,.flang_wrapper,#computer_skills{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+
+.form-group .group, .work_exp_wrapper .group, .edu_wrapper .group, .ach_wrapper .group, .mlang_wrapper .group,.flang_wrapper .group,#computer_skills .group,#driving{
+    width:45%;
+}
+
+.tab_label{
+    display:inline-block;
+    margin-bottom:2vw;
+}
+
+.tabordion section:not(:last-child){
+    margin-bottom:2vw;
+    border-bottom:1px solid lightgray;
+}
+
+textarea{
+    padding: 10px;
+    border: 1px solid lightgray;
+    margin-bottom:2vw;
+    min-height:150px;
+}
+
+.header h1{
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.code {
+    color: #333;
+    font-weight: normal;
+    background-color: lightgray;
+    font-size: 14px;
+    padding: 15px 20px;
+    margin: 10px 0;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+.footer{
+    background-color:#2e435f;
+
+}
+
+.footer.footer.footer p{
+    font-weight:400;
+    max-width:960px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.footer b{
+    font-weight:normal;
+}
