@@ -1,6 +1,6 @@
 {
-  "name": "@cedefop/europass-parser",
-  "version": "1.0.0",
+  "name": "europass-parser",
+  "version": "1.0.1",
   "description": "Javascript library for parsing into form fields Europass Json data.",
   "main": "docs/europass-parser.js",
   "scripts": {
