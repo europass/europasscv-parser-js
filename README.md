@@ -20,12 +20,12 @@ npm install --save europass-parser
 ES5 
 ```
 var EuropassParser = require('europass-parser');
-EuroapassParser(file);
+EuropassParser(file);
 ```
 ES6
 ``` 
 import * as EuropassParser form 'europass-parser';
-EuroapassParser(file);
+EuropassParser(file);
 ```
 * ### Via Download:
 
