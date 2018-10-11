@@ -1,8 +1,8 @@
 {
-  "name": "europass-parser",
+  "name": "@cedefop/europass-parser",
   "version": "1.0.0",
   "description": "Javascript library for parsing into form fields Europass Json data.",
-  "main": "build/europass-parser.js",
+  "main": "docs/europass-parser.js",
   "scripts": {
     "init": "mkdir docs",
     "clean": "rm -rf docs",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/macvag/EuropassParser.git"
+    "url": "git+https://github.com/europass/europasscv-parser-js.git"
   },
   "keywords": [
     "Europass",
@@ -23,7 +23,7 @@
   "author": "Vangelis Makrynikolas <macvag@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/macvag/EuropassParser/issues"
+    "url": "https://github.com/europass/europasscv-parser-js/issues"
   },
   "homepage": "https://github.com/europass/europasscv-parser-js",
   "devDependencies": {
