@@ -1,6 +1,6 @@
 {
   "name": "europass-parser",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Javascript library for parsing into form fields Europass Json data.",
   "main": "docs/europass-parser.js",
   "scripts": {
