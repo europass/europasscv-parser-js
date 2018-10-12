@@ -24,7 +24,7 @@ EuroapassParser(file);
 ```
 ES6
 ``` 
-import * as EuropassParser form 'europass-parser';
+import * as EuropassParser from 'europass-parser';
 EuroapassParser(file);
 ```
 * ### Via Download:
