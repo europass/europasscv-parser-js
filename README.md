@@ -42,7 +42,7 @@ click  [here](https://github.com/europass/europasscv-parser-js/releases/download
 	  -   Clone this repository
 	  -   cd into the repository folder
 	  -   ``` npm install && npm run build ```
-      -   doc folder is generated containing the europass-parser.js and europass-config.js
+      -   docs folder is generated containing the europass-parser.js and europass-config.js
 
 
 
