@@ -5,7 +5,7 @@
 The Europass CV helps users to present their skills and qualifications effectively and clearly. Any user can create a CV online [here](https://europass.cedefop.europa.eu/editors). 
 
 The Europass Parser Javascript Library gives the possibility to developers to parse quickly into their HTML forms a Europass PDF+XML CV created from users 
-through the Europass site. 
+through [the Europass site.](https://europass.cedefop.europa.eu/) 
 
 More information about the Europass CV Schema and resources about Europass REST services can be found at the [Europass Interoperability site.](https://interop.europass.cedefop.europa.eu/)
 
