@@ -88,10 +88,10 @@ document.addEventListener('work_length', function (event) {
 ```
 The suffix should be used as follows
 ```
-<input name="work_experience_title"> </input>  
+<input name="work_experience_title" />
 ...  
 <!-- The html below should be generated from the developer if does not already exists. -->  
-<input name="work_experience_title_1"> </input>
+<input name="work_experience_title_1" />
 ```
 This way the Europass Parser Javascript Library finds the available fields to fill in.
 
