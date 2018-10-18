@@ -19,12 +19,12 @@ const EuropassParserConfig = [
     { 'original': 'SkillsPassport.LearnerInfo.Identification.Demographics.Birthdate.Day', 'replace': 'birth_day', 'enabled': true},
     /* Gender */
     { 'original': 'SkillsPassport.LearnerInfo.Identification.Demographics.Gender.Label', 'replace': 'gender', 'enabled': true},
-    /** Photo */
+    /* Photo */
     { 'original': 'SkillsPassport.LearnerInfo.Identification.Photo.Data', 'replace': 'photo', 'enabled': true},
-    /** Headline */
+    /* Headline */
     { 'original': 'SkillsPassport.LearnerInfo.Headline.Type.Label', 'replace': 'headline_title', 'enabled': true},
     { 'original': 'SkillsPassport.LearnerInfo.Headline.Description.Label', 'replace': 'headline_description', 'enabled': true},
-    /** Work Experience */
+    /* Work Experience */
     { 'original': 'SkillsPassport.LearnerInfo.WorkExperience.Position.Label', 'replace': 'work_experience_title', 'prefix': '_', 'enabled': true},
     { 'original': 'SkillsPassport.LearnerInfo.WorkExperience.Activities', 'replace': 'work_experience_description', 'prefix': '_', 'enabled': true},
     { 'original': 'SkillsPassport.LearnerInfo.WorkExperience.Employer.Name', 'replace': 'work_experience_employer_name', 'prefix': '_', 'enabled': true},
@@ -40,7 +40,7 @@ const EuropassParserConfig = [
     { 'original': 'SkillsPassport.LearnerInfo.WorkExperience.Period.To.Year', 'replace': 'work_experience_to_year', 'prefix': '_', 'enabled': true},
     { 'original': 'SkillsPassport.LearnerInfo.WorkExperience.Period.Current', 'replace': 'work_experience_current', 'prefix': '_', 'enabled': true},
     
-    /** Education */
+    /* Education */
     { 'original': 'SkillsPassport.LearnerInfo.Education.Title', 'replace': 'education_title', 'prefix': '_', 'enabled': true},
     { 'original': 'SkillsPassport.LearnerInfo.Education.Activities', 'replace': 'education_description', 'prefix': '_', 'enabled': true},
     { 'original': 'SkillsPassport.LearnerInfo.Education.Organisation.Name', 'replace': 'education_name', 'prefix': '_', 'enabled': true},
@@ -55,14 +55,14 @@ const EuropassParserConfig = [
     { 'original': 'SkillsPassport.LearnerInfo.Education.Period.To.Year', 'replace': 'education_to_year', 'prefix': '_', 'enabled': true},
     { 'original': 'SkillsPassport.LearnerInfo.Education.Period.Current', 'replace': 'education_current', 'prefix': '_', 'enabled': true},
     
-    /** Achievements */
+    /* Achievements */
     { 'original': 'SkillsPassport.LearnerInfo.Achievement.Title.Label', 'replace': 'achievement_title', 'prefix': '_', 'enabled': true},
     { 'original': 'SkillsPassport.LearnerInfo.Achievement.Description', 'replace': 'achievement_description', 'prefix': '_', 'enabled': true},
     
-    /** Skills Mother Tongue */
+    /* Skills Mother Tongue */
     { 'original': 'SkillsPassport.LearnerInfo.Skills.Linguistic.MotherTongue.Description.Label', 'replace': 'mother_tongue', 'prefix': '_', 'enabled': true},
    
-    /** Foreign Language */
+    /* Foreign Language */
     { 'original': 'SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.Description.Label', 'replace': 'foreign_language_title', 'prefix': '_', 'enabled': true},
     { 'original': 'SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Listening', 'replace': 'foreign_language_listening', 'prefix': '_', 'enabled': true},
     { 'original': 'SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.ProficiencyLevel.Reading', 'replace': 'foreign_language_reading', 'prefix': '_', 'enabled': true},
@@ -83,15 +83,15 @@ const EuropassParserConfig = [
     { 'original': 'SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period.To.Month', 'replace': 'foreign_language_experience_to_month', 'prefix': '_', 'enabled': true},
     { 'original': 'SkillsPassport.LearnerInfo.Skills.Linguistic.ForeignLanguage.Experience.Period.To.Year', 'replace': 'foreign_language_experience_to_year', 'prefix': '_', 'enabled': true},
     
-    /** Other Skills - Driving */
+    /* Other Skills - Driving */
     { 'original': 'SkillsPassport.LearnerInfo.Skills.Driving.Description', 'replace': 'driving_category', 'prefix': '_', 'enabled': true},
-    /** Other Skills - Communication */
+    /* Other Skills - Communication */
     { 'original': 'SkillsPassport.LearnerInfo.Skills.Communication.Description', 'replace': 'communication_skills', 'enabled': true},
-    /** Other Skills - Organisational */
+    /* Other Skills - Organisational */
     { 'original': 'SkillsPassport.LearnerInfo.Skills.Organisational.Description', 'replace': 'organisational_skills', 'enabled': true},
-    /** Other Skills - JobRelated */
+    /* Other Skills - JobRelated */
     { 'original': 'SkillsPassport.LearnerInfo.Skills.JobRelated.Description', 'replace': 'job_related_skills', 'enabled': true},
-    /** Other Skills - Computer */
+    /* Other Skills - Computer */
     { 'original': 'SkillsPassport.LearnerInfo.Skills.Computer.Description', 'replace': 'computer_skills', 'enabled': true},
     { 'original': 'SkillsPassport.LearnerInfo.Skills.Computer.ProficiencyLevel.Communication', 'replace': 'computer_skills_communication', 'enabled': true},
     { 'original': 'SkillsPassport.LearnerInfo.Skills.Computer.ProficiencyLevel.ContentCreation', 'replace': 'computer_skills_content_creation', 'enabled': true},
