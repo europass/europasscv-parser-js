@@ -7,48 +7,47 @@ The Europass CV helps users to present their skills and qualifications effective
 The Europass Parser Javascript Library gives the possibility to developers to parse quickly into their HTML forms a Europass PDF+XML CV created from users 
 through the Europass site.
 
-More information about the Europass CV Schema and resources about Europass REST services can be found at the [Europass Interoperability site.](https://interop.europass.cedefop.europa.eu/)
+More information about the Europass CV Schema and resources about Europass REST services can be found at the [Europass Interoperability site.](https://interop.europass.cedefop.europa.eu/).
 
 ## Getting Europass Parser Javascript Library
 
 There are multiple ways of getting europass-parser.js
 
-* ### Via NPM:
+### Via NPM
 ```
 npm install --save europass-parser
 ```
-ES5 
-```
+#### ES5 
+```javascript
 var EuropassParser = require('europass-parser');
 EuropassParser(file);
 ```
-ES6
-``` 
+#### ES6
+```javascript
 import * as EuropassParser from 'europass-parser';
 EuropassParser(file);
 ```
-* ### Via Download:
+### Via Download
 
-click  [here](https://github.com/europass/europasscv-parser-js/releases/download/1.0.2/europass-parser.zip)  to download Europass Parser Javascript Library Unzip the folder and include scripts inside into your project
-
+Click [here](https://github.com/europass/europasscv-parser-js/releases/download/1.0.2/europass-parser.zip) to download Europass Parser Javascript Library. Unzip the folder and include scripts inside into your project.
+```html
     <script src="path/to/europass-config.js"> </script>  
     <script src="path/to/europass-parser.js"> </script>  
     <script>  
       // When you get the Europass CV (PDF+XML) file from a user pass it to the library  
       EuropassParser(file);  
     </script>
+```
+### Compile from sources
 
- * ### Compile from sources:
-	  -   Clone this repository
-	  -   cd into the repository folder
-	  -   ``` npm install && npm run build ```
-      -   docs folder is generated containing the europass-parser.js and europass-config.js
-
-
+- `git clone https://github.com/europass/europasscv-parser-js.git`
+- `cd europasscv-parser-js`
+- `npm install && npm run build`
+- `docs` folder is generated containing the `europass-parser.js` and `europass-config.js`
 
 ## Getting Started
 
--   europass-config.js includes all the available Europass Schema keys than can be parsed into an html form. For example in the following line
+-   `europass-config.js` includes all the available Europass Schema keys than can be parsed into an html form. For example in the following line
     ```
     ...  
     { 'original': 'SkillsPassport.LearnerInfo.Identification.PersonName.FirstName', 'replace': 'name', 'enabled': true},  
@@ -60,7 +59,7 @@ click  [here](https://github.com/europass/europasscv-parser-js/releases/download
 -   **europass-parser.js**  is the library that takes as input the configuration file and fills the html elements.
 
 ## Events
-Some sections, such as Work Experience, Education, Achievemts, Languages, Skills, have more than one Object inside. For these sections, the corresponing HTML elements need to be populated by the developer for the Europass Parser to be able to fill them.
+Some sections, such as Work Experience, Education, Achievemnts, Languages, Skills, have more than one Object inside. For these sections, the corresponing HTML elements need to be populated by the developer for the Europass Parser to be able to fill them.
 
 The events below inform the developer of the number of Objects for each Section that exists inside Europass CV data.
 
@@ -71,14 +70,14 @@ The events below inform the developer of the number of Objects for each Section 
 -   Foreign languages records  **'foreign_languages'**
 -   Driving licenses records  **'driving_length'**
 
-For these sections  **europass-config.js**  contains an extra key the  **suffix**
+For these sections `europass-config.js` contains an extra key the **suffix**
 ```
 ...  
 { 'original': 'SkillsPassport.LearnerInfo.WorkExperience.Position.Label', 'replace': 'work_experience_title', 'suffix': '_', 'enabled': true}  
 ...
 ```
 example
-```
+```javascript
 document.addEventListener('work_length', function (event) {  
  var number_of_work_experiences = event.detail;  
  /*  
@@ -87,7 +86,7 @@ document.addEventListener('work_length', function (event) {
 });
 ```
 The suffix should be used as follows
-```
+```html
 <input name="work_experience_title" />
 ...  
 <!-- The html below should be generated from the developer if does not already exists. -->  
@@ -99,7 +98,7 @@ This way the Europass Parser Javascript Library finds the available fields to fi
 
 Finished parsing event.
 
--   Finishing parsing Event 'EuropassParser_finished'
+-   Finishing parsing Event `EuropassParser_finished`
 
 ### Extras
 
@@ -133,4 +132,6 @@ Finished parsing event.
         ```
     -   Use the library following the get started instructions.
 
-#### Available demo can be found [here](https://europass.github.io/europasscv-parser-js/)
+#### Demo
+
+Available demo can be found [here](https://europass.github.io/europasscv-parser-js/).
